@@ -9,7 +9,7 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 export class ErrorInterceptor implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log("passou no interceptor");
+    
         return next.handle(req)
         .catch((error, caught) => {
             let errorObj = error;
